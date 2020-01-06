@@ -56,6 +56,12 @@
             <artifactId>log4j</artifactId>
         </dependency>
 
+        <!--公共工具类-->
+        <dependency>
+            <groupId>com.tiger.commodity</groupId>
+            <artifactId>commodity_utils</artifactId>
+        </dependency>
+
     </dependencies>
      <build>
          <!-- 资源引入 按照做法一些配置文件 需要放置到  resources文件下  以下就是把指定的配置文件 映射到

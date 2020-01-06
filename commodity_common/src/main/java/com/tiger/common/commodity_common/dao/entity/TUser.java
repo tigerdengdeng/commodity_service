@@ -2,6 +2,8 @@ package com.tiger.common.commodity_common.dao.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import com.baomidou.mybatisplus.annotation.TableId;
+import lombok.Data;
+
 import java.io.Serializable;
 /**
  * <p>
@@ -11,6 +13,7 @@ import java.io.Serializable;
  * @author tiger
  * @since 2019-12-31
  */
+@Data
 public class TUser extends Model<TUser> {
 
     private static final long serialVersionUID = 1L;
@@ -36,50 +39,10 @@ public class TUser extends Model<TUser> {
      */
     private Integer status;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public Integer getStatus() {
-        return status;
-    }
-
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
-
     @Override
     protected Serializable pkVal() {
         return null;
     }
 
-    @Override
-    public String toString() {
-        return "TUser{" +
-        ", id=" + id +
-        ", username=" + username +
-        ", password=" + password +
-        ", status=" + status +
-        "}";
-    }
+
 }

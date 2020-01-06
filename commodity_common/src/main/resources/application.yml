@@ -1,3 +1,5 @@
+
+
 #mysql
 spring:
   datasource:
@@ -14,4 +16,5 @@ logging:
 mybatis-plus:
   #指定访问路径
   mapper-locations: classpath*:com/tiger/common/**/*Mapper.xml
-
+server:
+  port: 8081

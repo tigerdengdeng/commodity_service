@@ -13,11 +13,14 @@
     <groupId>com.tiger.commodity</groupId>
     <artifactId>commodity_service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <name>commodity_service</name>
     <description>商品系统 主框架</description>
     <!--引入子框架-->
     <modules>
         <module>commodity_common</module>
+        <module>commodity_utils</module>
+        <module>commodity_userservice</module>
     </modules>
     <!--对应的版本 父框架集中管理 方便修改 -->
     <properties>
@@ -55,6 +58,7 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+
         <!--springcloud 依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -119,6 +123,18 @@
                 <groupId>log4j</groupId>
                 <artifactId>log4j</artifactId>
                 <version>${log4j.version}</version>
+            </dependency>
+            <!--公共数据-->
+            <dependency>
+                <groupId>com.tiger.common</groupId>
+                <artifactId>commodity_common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!--公共工具类-->
+            <dependency>
+                <groupId>com.tiger.commodity</groupId>
+                <artifactId>commodity_utils</artifactId>
+                <version>${project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
