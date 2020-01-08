@@ -20,7 +20,8 @@
     <modules>
         <module>commodity_common</module>
         <module>commodity_utils</module>
-        <module>commodity_userservice</module>
+      <module>commodity_user_service</module>
+        <module>commodity_eureka_centrality</module>
     </modules>
     <!--对应的版本 父框架集中管理 方便修改 -->
     <properties>
@@ -58,6 +59,12 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+        <!-- spring-boot-starter-freemarker 是一个模板引擎，用于我们设置错误输出模板。-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>
+
 
         <!--springcloud 依赖-->
         <dependency>

@@ -1,5 +1,7 @@
 package com.tiger.commodity.commodity_utils.common.vo;
 
+import com.tiger.commodity.commodity_utils.execption.BaseExceptionHandler;
+import com.tiger.commodity.commodity_utils.responsecode.ResponseCode;
 import lombok.Data;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -14,7 +16,7 @@ import java.io.Serializable;
  */
 @Data
 @Component
-public class BaseResponseVO<T> implements Serializable {
+public class BaseResponseVO<T>  implements Serializable {
 
     private T data;
     private String code;
@@ -83,9 +85,17 @@ public class BaseResponseVO<T> implements Serializable {
      * @param exception  异常
      */
     public BaseResponseVO(MethodArgumentNotValidException exception) {
-        this.code = exception.getBindingResult().getFieldError().getCode();
+        this.code = ResponseCode.ERROR_500.getCode().toString();
         this.msg = exception.getBindingResult().getFieldError().getDefaultMessage();
     }
 
+    /**
+     * 全局异常
+     * @param exception  异常
+     */
+    public BaseResponseVO(Exception exception) {
+        this.code = ResponseCode.ERROR_500.getCode().toString();
+        this.msg =ResponseCode.ERROR_500.getMessage();
+    }
 }
 
