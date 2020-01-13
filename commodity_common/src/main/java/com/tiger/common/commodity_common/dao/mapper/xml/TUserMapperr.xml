@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.tiger.common.commodity_common.dao.mapper.TUserMapper">
+<mapper namespace="com.tiger.common.commodity_common.dao.mapper.TUserMapperr">
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.tiger.common.commodity_common.dao.entity.TUser">
@@ -9,7 +9,7 @@
         <result column="password" property="password" />
         <result column="status" property="status" />
     </resultMap>
-     <select id="userById" resultType="com.tiger.common.commodity_common.dao.entity.TUser">
+     <select id="userBy2Id" resultType="com.tiger.common.commodity_common.dao.entity.TUser">
          select * from t_user where id= #{id}
      </select>
 </mapper>

@@ -16,7 +16,7 @@ import java.io.Serializable;
  * @author tiger
  * @since 2019-12-31
  */
-public interface TUserMapper extends BaseMapper<TUser> {
+public interface TUserMapperr extends BaseMapper<TUser> {
 
-    TUser userById(@Param("id")int id);
+    TUser userBy2Id(@Param("id")int id);
 }
