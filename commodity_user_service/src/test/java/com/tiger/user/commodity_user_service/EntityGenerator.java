@@ -19,7 +19,7 @@ import java.util.Map;
 public class EntityGenerator {
 
     // 生成输出目录，定位到工程的java目录下
-    private String outputDir = "/Users/mytiger/Desktop/commodity_service/commodity_user_service/src/main/java";
+    private String outputDir = "/Users/mytiger/Desktop/commodity_service/commodity_user_service/src/main/java/";
     // 生成类的作者
     private String author = "tiger";
     // 数据源相关配置
@@ -28,7 +28,7 @@ public class EntityGenerator {
     private String userName = "root";
     private String userPwd = "bdf7dd77";
     // DAO的包路径
-    private String daoPackage = "com.tiger.user.commodity_user_service";
+    private String daoPackage = "com.tiger.user.commodity_user_service.dao";
     // 待生成的表名，注意是覆盖更新
     private static String[] tableNames;
 

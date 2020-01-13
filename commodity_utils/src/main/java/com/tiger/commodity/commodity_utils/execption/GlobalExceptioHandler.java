@@ -1,22 +1,21 @@
 package com.tiger.commodity.commodity_utils.execption;
 
-import com.tiger.commodity.commodity_utils.common.vo.BaseResponseVO;
+
 import com.tiger.commodity.commodity_utils.error.BasicException;
 import com.tiger.commodity.commodity_utils.error.ExceptionEntity;
 import com.tiger.commodity.commodity_utils.responsecode.ResponseCode;
+import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.HttpMediaTypeNotSupportedException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
+
 import org.springframework.web.servlet.NoHandlerFoundException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.net.BindException;
 
 /**
  * 全局异常控制类
@@ -29,11 +28,12 @@ import java.net.BindException;
 @ControllerAdvice
 //以JSON格式返回
 @ResponseBody
+@Data
 //日志记录
 @Slf4j
 public class GlobalExceptioHandler {
 
-    private ExceptionEntity ex = new ExceptionEntity();
+   private  ExceptionEntity ex=new ExceptionEntity();
 
     /**
      * 404异常处理

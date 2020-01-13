@@ -80,22 +80,5 @@ public class BaseResponseVO<T>  implements Serializable {
     }
 
 
-    /**
-     * 全局异常
-     * @param exception  异常
-     */
-    public BaseResponseVO(MethodArgumentNotValidException exception) {
-        this.code = ResponseCode.ERROR_500.getCode().toString();
-        this.msg = exception.getBindingResult().getFieldError().getDefaultMessage();
-    }
-
-    /**
-     * 全局异常
-     * @param exception  异常
-     */
-    public BaseResponseVO(Exception exception) {
-        this.code = ResponseCode.ERROR_500.getCode().toString();
-        this.msg =ResponseCode.ERROR_500.getMessage();
-    }
 }
 
