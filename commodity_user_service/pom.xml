@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!--引入主框架-->
+    <parent>
+        <groupId>com.tiger.commodity</groupId>
+        <artifactId>commodity_service</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <groupId>com.tiger.user</groupId>
+    <artifactId>commodity_user_service</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>commodity_user_service</name>
+    <description>用户 服务</description>
+    <dependencies>
+        <!--参数校验依赖begin-->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>2.0.1.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>6.1.0.Alpha6</version>
+        </dependency>
+        <!--参数校验依赖end-->
+
+        <!--公共数据-->
+        <dependency>
+            <groupId>com.tiger.common</groupId>
+            <artifactId>commodity_common</artifactId>
+        </dependency>
+
+        <!--公共工具类-->
+        <dependency>
+            <groupId>com.tiger.commodity</groupId>
+            <artifactId>commodity_utils</artifactId>
+        </dependency>
+
+        <!--创建并注册服务提供者 Eureka Client 所需要依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
+    </dependencies>
+    <!--moven 打包-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+
+        <!-- 资源引入 按照做法一些配置文件 需要放置到  resources文件下  以下就是把指定的配置文件 映射到
+       resources文件下 -->
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+</project>
