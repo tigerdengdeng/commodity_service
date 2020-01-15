@@ -32,7 +32,7 @@ public class EntityGenerator {
     // 待生成的表名，注意是覆盖更新
     private static String[] tableNames;
 
-    static{
+    static {
         tableNames = new String[]{
                 "t_user"
         };
@@ -72,9 +72,9 @@ public class EntityGenerator {
         // 包配置
         PackageConfig pc = new PackageConfig();
         pc.setParent(null);
-        pc.setEntity(daoPackage+".entity");
-        pc.setMapper(daoPackage+".mapper");
-        pc.setXml(daoPackage+".mapper.xml");
+        pc.setEntity(daoPackage + ".entity");
+        pc.setMapper(daoPackage + ".mapper");
+        pc.setXml(daoPackage + ".mapper.xml");
         mpg.setPackageInfo(pc);
 
         // 注入自定义配置，可以在 VM 中使用 cfg.abc 设置的值
@@ -95,6 +95,6 @@ public class EntityGenerator {
         // 打印注入设置
         System.err.println(mpg.getCfg().getMap().get("abc"));
 
-     }
+    }
 
 }

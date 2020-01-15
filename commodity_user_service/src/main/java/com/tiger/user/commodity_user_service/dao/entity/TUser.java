@@ -1,4 +1,5 @@
 package com.tiger.user.commodity_user_service.dao.entity;
+
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -9,6 +10,7 @@ import lombok.Data;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+
 /**
  * 用户实体类
  *
@@ -42,7 +44,6 @@ public class TUser implements Serializable {
     @NotBlank(message = "密码不能为空")
     @NotNull(message = "密码不能为空")
     private String password;
-
 
 
     //     状态(0启用,1禁用)

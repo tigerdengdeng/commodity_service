@@ -79,6 +79,5 @@ public class BaseResponseVO<T>  implements Serializable {
         this.token = token;
     }
 
-
 }
 

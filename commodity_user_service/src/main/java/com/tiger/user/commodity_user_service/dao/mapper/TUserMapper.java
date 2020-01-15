@@ -17,8 +17,9 @@ import java.util.List;
 public interface TUserMapper extends BaseMapper<TUser> {
     /**
      * 根据条件查询用户
+     *
      * @param username
      * @return
      */
-    TUser whereUserName(@Param("username")String username);
+    TUser whereUserName(@Param("username") String username);
 }

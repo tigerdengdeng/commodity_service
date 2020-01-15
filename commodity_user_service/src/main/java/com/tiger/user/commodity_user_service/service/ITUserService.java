@@ -15,6 +15,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface ITUserService extends IService<TUser> {
     /**
      * 接口 根据用户名查询用户
+     *
      * @param user
      * @return
      */

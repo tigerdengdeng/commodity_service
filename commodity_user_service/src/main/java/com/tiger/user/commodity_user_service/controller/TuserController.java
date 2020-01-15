@@ -34,7 +34,7 @@ public class TuserController {
     private TUserServiceImpl itUserService;
 
     @PostMapping("/login")
-    public BaseResponseVO login(@RequestBody @Validated TUser user)  {
+    public BaseResponseVO login(@RequestBody @Validated TUser user) {
         BaseResponseVO tUser = itUserService.whereUserName(user);
         return tUser;
 

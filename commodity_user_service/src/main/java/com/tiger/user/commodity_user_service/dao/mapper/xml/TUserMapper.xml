@@ -4,12 +4,12 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.tiger.user.commodity_user_service.dao.entity.TUser">
-        <id column="id" property="id" />
-        <result column="username" property="username" />
-        <result column="password" property="password" />
-        <result column="status" property="status" />
+        <id column="id" property="id"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="status" property="status"/>
     </resultMap>
-     <select id="whereUserName"   resultType="java.util.Map" resultMap="BaseResultMap">
+    <select id="whereUserName" resultType="java.util.Map" resultMap="BaseResultMap">
           select * from t_user where username= #{username}
      </select>
 
