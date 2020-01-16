@@ -3,12 +3,13 @@ package com.tiger.user.commodity_user_service;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 
-@EnableEurekaClient
+@EnableDiscoveryClient
 //扫描公共工具类
 @ComponentScan(basePackages = {"com.tiger.*"})
 

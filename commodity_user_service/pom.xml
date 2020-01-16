@@ -15,6 +15,12 @@
     <name>commodity_user_service</name>
     <description>用户 服务</description>
     <dependencies>
+        <!--srping-boot web依赖-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-web</artifactId>-->
+<!--        </dependency>-->
+
         <!--参数校验依赖begin-->
         <dependency>
             <groupId>javax.validation</groupId>

@@ -17,8 +17,14 @@
     <description>注册中心</description>
 
 
-    <!--eureka 注册中心-->
+
     <dependencies>
+        <!--srping-boot web依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--eureka 注册中心-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>

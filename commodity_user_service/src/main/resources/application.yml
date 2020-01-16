@@ -8,7 +8,7 @@ spring:
   #
 
   application:
-    name: commodity_user_service
+    name: user
 
   mvc:
     #出现错误时。直接抛出异常（便于异常统一处理 否则捕获不到404）

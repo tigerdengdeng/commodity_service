@@ -21,6 +21,12 @@
         </properties>
     <!--以下依赖的版本控制 由主框架统一配置-->
     <dependencies>
+        <!--srping-boot web依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
         <!-- mybatis-plus依赖 -->
         <dependency>
             <groupId>com.baomidou</groupId>

@@ -20,6 +20,12 @@
 	</properties>
 
 	<dependencies>
+		<!--srping-boot web依赖-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
 		<!--阿里巴巴JSON库 用于json数据处理-->
 		<dependency>
 			<groupId>com.alibaba</groupId>

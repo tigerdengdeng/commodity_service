@@ -22,6 +22,8 @@
         <module>commodity_utils</module>
         <module>commodity_user_service</module>
         <module>commodity_eureka_centrality</module>
+        <module>commodity_zuul_gateway</module>
+        <module>commodity_product_service</module>
     </modules>
     <!--对应的版本 父框架集中管理 方便修改 -->
     <properties>
@@ -39,11 +41,11 @@
     <!--各项依赖-->
     <dependencies>
 
-        <!--srping-boot web依赖-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
+<!--        &lt;!&ndash;srping-boot web依赖&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-web</artifactId>-->
+<!--        </dependency>-->
         <!--srping-cloud 依赖-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
