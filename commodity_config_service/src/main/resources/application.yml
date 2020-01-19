@@ -1,0 +1,31 @@
+
+#eureka 注册中心地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka  #当前服务注册到服务中心去 http为注册中心地址
+
+spring:
+  #当前服务名称
+  application:
+    name: config_server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/Project_tiger/config.git #仓库地址
+          search-paths: /**    #给予访问所有目录权限
+          password:
+          username:
+      label:  master  #指定访问分支
+  #向外暴露接口
+#  #主要是为了暴露/actuator/bus-refresh,刷新配置信息
+management:
+  endpoints:
+    web:
+      exposure:
+        include:  "*"
+
+#当前服务端口
+server:
+  port: 8086

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<!--引入父框架-->
+	<parent>
+		<groupId>com.tiger.commodity</groupId>
+		<artifactId>commodity_service</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<!--当前框架信息-->
+	<groupId>com.tiger.configservice</groupId>
+	<artifactId>commodity_config_service</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>commodity_config_service</name>
+	<description>远程配置 服务中心</description>
+
+
+	<dependencies>
+
+		<!--服务提供者client-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+
+		<!--config service 远程服务中心配置-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-config-server</artifactId>
+		</dependency>
+
+<!--		Spring cloud bus的maven(Spring cloud bus作为消息总线,mq作为消息中间件,传递信息)-->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.cloud</groupId>-->
+<!--			<artifactId>spring-cloud-starter-bus-amqp</artifactId>-->
+<!--		</dependency>-->
+
+	</dependencies>
+	<!--monven-->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

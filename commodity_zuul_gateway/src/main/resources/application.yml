@@ -1,0 +1,55 @@
+#暴露端口
+server:
+  port: 8084
+
+
+#名称
+spring:
+  application:
+    name: gateway
+  #网关配置 #注册中心地址将 gateway 注册到服务中心之后，网关会自动代理所有的在注册中心的服务，访问这些服务的语法为：
+    ##http://网关地址：端口/服务中心注册 serviceId/具体的url
+#  cloud:
+#    gateway:
+#      discovery:
+#        locator:
+#          # 服务名小写
+#          lower-case-service-id: true
+#          #通过服务注册中心让gateway发现所有服务 进行代理
+#          enabled: false
+#      routes:
+#        - id: user_api
+#          uri: lb://user
+#          predicates:
+#            - Path=/user_api/**
+#          filters:
+#            - StripPrefix=1
+#        - id: product_api
+#          uri: lb://product
+#          predicates:
+#            - Path=/product_api/**
+#          filters:
+#            - StripPrefix=1
+
+
+#注册中心地址将 gateway 注册到服务中心之后，网关会自动代理所有的在注册中心的服务，访问这些服务的语法为：
+#http://网关地址：端口/服务中心注册 serviceId/具体的url
+eureka:
+#  instance:
+#    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone:  http://localhost:8081/eureka/     #当前服务注册到服务中心去 http为注册中心地址
+
+
+#  Spring Cloud Gateway 提供了 Endpoint 端点，暴露路由信息，有获取所有路由、刷新路由、查看单个路由、
+#  删除路由等方法，源码在 org.springframework.cloud.gateway.actuate.GatewayControllerEndpoint 中，
+#  想访问端点中的方法需要添加 spring-boot-starter-actuator 注解，并在配置文件中暴露所有端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always

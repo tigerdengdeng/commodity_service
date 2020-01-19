@@ -1,0 +1,13 @@
+#暴露端口
+server:
+  port: 8085
+
+#服务名称
+spring:
+  application:
+    name: product
+#eureka 配置
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://localhost:8081/eureka/     #当前服务注册到服务中心去 http为注册中心地址
