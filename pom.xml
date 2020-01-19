@@ -24,6 +24,7 @@
         <module>commodity_eureka_centrality</module>
         <module>commodity_zuul_gateway</module>
         <module>commodity_product_service</module>
+        <module>commodity_config_service</module>
     </modules>
     <!--对应的版本 父框架集中管理 方便修改 -->
     <properties>

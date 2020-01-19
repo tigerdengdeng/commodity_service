@@ -52,6 +52,18 @@
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
+<!--        Spring cloud bus的maven(Spring cloud bus作为消息总线,mq作为消息中间件,传递信息)-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-bus-amqp</artifactId>-->
+<!--        </dependency>-->
+
+        <!--config 客户端依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+
     </dependencies>
     <!--moven 打包-->
     <build>
