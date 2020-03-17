@@ -9,27 +9,28 @@ spring:
     name: gateway
   #网关配置 #注册中心地址将 gateway 注册到服务中心之后，网关会自动代理所有的在注册中心的服务，访问这些服务的语法为：
     ##http://网关地址：端口/服务中心注册 serviceId/具体的url
-#  cloud:
-#    gateway:
-#      discovery:
-#        locator:
-#          # 服务名小写
-#          lower-case-service-id: true
-#          #通过服务注册中心让gateway发现所有服务 进行代理
-#          enabled: false
-#      routes:
-#        - id: user_api
-#          uri: lb://user
-#          predicates:
-#            - Path=/user_api/**
-#          filters:
-#            - StripPrefix=1
-#        - id: product_api
-#          uri: lb://product
-#          predicates:
-#            - Path=/product_api/**
-#          filters:
-#            - StripPrefix=1
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          # 服务名小写
+          lower-case-service-id: true
+          #通过服务注册中心让gateway发现所有服务 进行代理lb代表从注册中心获取服务
+#          在上面的配置中，配置了一个Path的predicat,将以/consumer/**开头的请求都会转发到uri为lb://service-consumer的地址上
+#          ，lb://service-consumer（注册中心中服务的名称）即service-consumer服务的负载均衡地址，并用StripPrefix的filter
+#          在转发之前将/consumer去掉
+#          。同时将spring.cloud.gateway.discovery.locator.enabled改为false
+#          如果不改的话，之前的http://localhost:8081/service-consumer/user/info这样的请求地址也能正常访问，
+#          因为这时为每个服务创建了2个router。
+          enabled: false
+      routes:
+      - id: userserver
+        uri: lb://userserver
+        predicates:
+        - Path=/userapi/**
+        filters:
+        - StripPrefix=1
+
 
 
 #注册中心地址将 gateway 注册到服务中心之后，网关会自动代理所有的在注册中心的服务，访问这些服务的语法为：

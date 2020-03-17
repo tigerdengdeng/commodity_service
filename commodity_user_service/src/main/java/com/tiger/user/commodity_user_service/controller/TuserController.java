@@ -39,4 +39,10 @@ public class TuserController {
         return tUser;
 
     }
+
+    @GetMapping("/testindex")
+    public  String index(){
+
+        return  "测试数据";
+    }
 }
