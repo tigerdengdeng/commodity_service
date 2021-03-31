@@ -37,7 +37,7 @@
         <log4j.version>1.2.17</log4j.version>
         <fastjson.version>1.2.62</fastjson.version>
         <jjwt.version>0.9.1</jjwt.version>
-        <guava.version>28.1-jre</guava.version>
+        <guava.version>29.0-jre</guava.version>
     </properties>
     <!--各项依赖-->
     <dependencies>
